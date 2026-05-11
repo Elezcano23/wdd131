@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 – Dynamic Web Fundamentals – Ezequiel Lezcano/title>
+    <title>WDD 131 - Dynamic Web Fundamentals - Ezequiel Lezcano </title>
     <meta name="description" content="WDD 131 - Dynamic Web Fundamentals">
     <meta name="author" content="Ezequiel Lezcano">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Merriweather" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
     <header>
-        <p>Header content</p>
-
-        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        
+        <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
 
         <nav>
             <ul class="navigation">
@@ -27,19 +29,29 @@
     <main>
         <h1>Ezequiel Lezcano</h1>
 
-        <section class="card">
+        <div class="cadrs-container">
+            <section class="card">
             <h2>About Me</h2>
             <img src="images/profile.png" alt="Ezequiel Lezcano file photo">
             <p>My name is Ezequiel Lezcano. I was born in Choele Choel, Río Negro province, but I currently live in the city of 9 de Julio, Buenos Aires province. I currently work as an auditor and data analyst. I'm a saxophonist and I play in the band "Altimus Club."</p>
-        </section>
+            </section>
 
-        <section class="card">
+            <section class="card">
             <h2>9 de Julio, Argentina</h2>
             <img src="images/argentina-flag.png" alt="Official flag of Argentina">
             <p>Argentina is a large South American country with a landscape that includes the Andes Mountains, glacial lakes, and the grasslands of the Pampas, the traditional grazing land of its famous cattle. The country is known for the dance and music of tango. Its large, cosmopolitan capital, Buenos Aires, centers around the Plaza de Mayo, surrounded by imposing 19th-century buildings, such as the Casa Rosada, the iconic presidential palace.</p>
-        </section>
+            </section>
+        </div>
     </main>
-    <footer></footer>
-
+    <footer>
+        <p>
+        &copy; <span id="currentyear"></span> 🦁 Ezequiel Lezcano 🦁 - Argentina
+    </p>
+    <p id="lastModified"></p>
+    </footer>
+    <script>
+        document.getElementById("currentyear").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
+    </script>
 </body>
 </html>
