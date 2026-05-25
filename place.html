@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recife - Brazil</title>
+    <meta name="description" content="Discover the hidden beauties of the city of Recife, Brazil. Known as the Brazilian Venice.">
+    <meta name="author" content="Ezequiel Lezcano">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Recife - Brazil</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#climate">Climate</a>
+            <a href="#gallery">Gallery</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <picture>
+                <source
+                srcset="images/recife-hero-large.webp"
+                media="(min-width: 768px)"
+                type="image/webp"
+                >
+                <img src="images/recife-hero-small.webp" alt="View of Marco Zero, a tourist attraction in the city."
+                width="480"
+                height="320"
+                loading="eager"
+                >
+            </picture>
+            <div class="hero-text">
+                <h2>The Brazilian Venice</h2>
+                <p>The rich history and culture of Recife await you.</p>
+            </div>
+        </section>
+        <section id="about" class="about">
+            <h2>About Recife</h2>
+            <p>
+                Recife is a city located on the Atlantic coast of northeastern Brazil. It is the capital of the state of Pernambuco.
+            </p>
+            <ul class="facts">
+                <li><strong>State:</strong> Pernambuco</li>
+                <li><strong>Language:</strong> Portuguese</li>
+                <li><strong>Currency:</strong> Real brasileiro (R$)</li>
+                <li><strong>Population:</strong> ~1,7 million</li>
+                <li><strong>Area:</strong> 218.84km²</li> 
+            </ul>
+        </section>
+        <section id="climate" class="climate">
+
+            <img
+            class="weather-icon-mobile"
+            src="images/weather-icon.svg"
+            alt="weather icon"
+            width="48"
+            height="48"
+            >
+
+            <h2 class="climate-heading">Climate</h2>
+
+            <div class="climate-data">
+                <p><strong>Condition:</strong> Partly cloudy</p>
+                <p><strong>Temperature:</strong> <span id="temperature">24</span> °C</p>
+                <p><strong>Wind speed:</strong> <span id="windSpeed">12</span> km/h</p>
+                <p>
+                <strong>Windchill:</strong>
+                <span id="windchill"></span> °C
+                </p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>
+      &copy; <span id="currentYear"></span> 🦁 Ezequiel Lezcano 🦁 - Argentina
+        </p>
+        <p>
+      Last Modified: <span id="lastModified"></span>
+        </p>
+    </footer>
+</body>
+</html>
