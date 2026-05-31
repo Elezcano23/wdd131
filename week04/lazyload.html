@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Load - WDD131 week 04</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - lazy load, by Ezequiel Lezcano, student at BYU-Idaho, Argentina.">
+    <meta name="author" content="Ezequiel Lezcano">
+    <link rel="stylesheet" href="styles/lazyload.css">
+    <script src="scripts/lazyload.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Lazy Load Demostration</h1>
+    </header>
+    <main> 
+        <picture>
+            <img src="https://images.ctfassets.net/8zlbnewncp6f/5782jHHAEfNL2YwIbu28Ge/21be1410555b3c17cb07e645c7180414/hero-hunk-160r-4v-primer-plano.png?w=600&fm=webp&q=90" alt="Hero Hunk 160r" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="https://pueyrredonmotos.com/wp-content/uploads/2021/05/stratus-150-base-roja.jpg" alt="Keller Stratus 150" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/2019-02-27_Moto_Zanella_Patagonian_Blackstreet_150_Custom_motorcycle.jpg" alt="Zanella Patagonian Eagle 150" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="https://http2.mlstatic.com/D_NQ_NP_774987-MLA111867330965_052026-O.webp" alt="Siam Nomad 150" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgnY3JND5O2uVhq9xOeRAqHc9ua3O_WCWK09Cv8fwc2lbGgw_6y1tFMnsjveGJp_FJy-WQ86LKYjXlQSGpKLqD-fHQYdlAwGkEzfSTcd87WGAVMYtw1FyuAIOnRPFSRmtaUnpxB1y2R3jM/s1600/2+(1).jpg" alt="Yamaha XTZ 250" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="https://dcdn-us.mitiendanube.com/stores/108/169/products/img_7908-c184ece8e9a4f573e017616907424480-1024-1024.webp?w=1920" alt="Gilera SMX 200" loading="lazy" width="400" height="600">
+        </picture>
+    </main>
+    <footer>
+        <p>
+        &copy; <span id="currentyear"></span> 🦁 Ezequiel Lezcano 🦁 - Argentina
+    </p>
+    <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
