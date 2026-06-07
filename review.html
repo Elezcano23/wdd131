@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Review Submitted – ReviewHub</title>
+  <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - review submitted by Ezequiel Lezcano, student at BYU-Idaho, Argentina.">
+  <meta name="author" content="Ezequiel Lezcano">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/form.css" />
+  <script src="scripts/confirm.js" defer></script>
+</head>
+<body>
+
+  <div class="page-wrapper">
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="logo">&#9733; ReviewHub</div>
+        <p class="tagline">Share your experience. Help others decide.</p>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="confirm-card">
+        <div class="confirm-icon">&#10003;</div>
+        <h1>Thank You!</h1>
+        <p class="confirm-subtitle">Your review has been submitted successfully.</p>
+
+        <div class="review-summary" id="review-summary">
+          <!-- Filled by JS -->
+        </div>
+
+        <div class="counter-box">
+          <span class="counter-label">Total reviews submitted</span>
+          <span class="counter-number" id="review-count">0</span>
+        </div>
+
+        <a href="form.html" class="back-btn">&#8592; Write Another Review</a>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+          <p>
+            &copy; <span id="currentyear"></span> 🦁 Ezequiel Lezcano 🦁 - Argentina
+          </p>
+          <p id="lastModified"></p>
+      </div>
+    </footer>
+  </div>
+
+
+</body>
+</html>

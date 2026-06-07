@@ -1,0 +1,514 @@
+/* ============================================
+   CSS VARIABLES & RESET
+   ============================================ */
+:root {
+  --color-bg: #0f1117;
+  --color-surface: #1a1d27;
+  --color-surface-2: #22263a;
+  --color-border: #2e3350;
+  --color-accent: #f5c842;
+  --color-accent-dim: rgba(245, 200, 66, 0.12);
+  --color-text: #e8eaf2;
+  --color-text-muted: #8b90a8;
+  --color-success: #4cce8a;
+  --color-error: #f56565;
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'DM Sans', sans-serif;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --shadow-card: 0 8px 40px rgba(0,0,0,0.4);
+  --transition: 0.2s ease;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.6;
+  min-height: 100vh;
+  background-image:
+    radial-gradient(ellipse at 20% 10%, rgba(245,200,66,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(76,206,138,0.04) 0%, transparent 50%);
+}
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem 1rem 3rem;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+.site-header {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: 1.25rem 1.5rem;
+}
+
+.header-inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--color-accent);
+  letter-spacing: 0.5px;
+}
+
+.tagline {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 0.2rem;
+}
+
+/* ============================================
+   FORM CARD
+   ============================================ */
+.form-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  width: 100%;
+  max-width: 640px;
+  overflow: hidden;
+  animation: slideUp 0.45s ease both;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.form-card-header {
+  background: linear-gradient(135deg, var(--color-surface-2), var(--color-surface));
+  border-bottom: 1px solid var(--color-border);
+  padding: 2rem 2.5rem 1.5rem;
+}
+
+.form-card-header h1 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--color-text);
+  line-height: 1.2;
+}
+
+.form-card-header p {
+  color: var(--color-text-muted);
+  margin-top: 0.35rem;
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   FORM FIELDS
+   ============================================ */
+.review-form {
+  padding: 2rem 2.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Labels */
+label,
+legend {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: 0.3px;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+.required {
+  color: var(--color-accent);
+  margin-left: 2px;
+}
+
+.hint {
+  font-weight: 400;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  margin-left: 4px;
+}
+
+/* Text inputs & textarea */
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+  width: 100%;
+  background: var(--color-surface-2);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.7rem 1rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(245,200,66,0.15);
+}
+
+input[type="text"]::placeholder,
+textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+/* Select wrapper */
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper select {
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+.select-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  pointer-events: none;
+  font-size: 0.75rem;
+}
+
+/* ============================================
+   STAR RATING
+   ============================================ */
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 0.25rem;
+  width: fit-content;
+  margin-top: 0.25rem;
+}
+
+.star-rating input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.star-rating label {
+  font-size: 2.2rem;
+  color: var(--color-border);
+  cursor: pointer;
+  transition: color var(--transition), transform var(--transition);
+  line-height: 1;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input:checked ~ label {
+  color: var(--color-accent);
+}
+
+.star-rating label:hover {
+  transform: scale(1.15);
+}
+
+/* ============================================
+   CHECKBOXES
+   ============================================ */
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--color-surface-2);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.55rem 0.9rem;
+  cursor: pointer;
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.checkbox-item:has(input:checked) {
+  border-color: var(--color-accent);
+  background: var(--color-accent-dim);
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--color-accent);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.checkbox-item label {
+  font-size: 0.875rem;
+  font-weight: 400;
+  cursor: pointer;
+  color: var(--color-text);
+}
+
+/* ============================================
+   SUBMIT BUTTON
+   ============================================ */
+.submit-group {
+  margin-top: 0.5rem;
+}
+
+.submit-btn {
+  width: 100%;
+  background: var(--color-accent);
+  color: #0f1117;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.9rem 1.5rem;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.submit-btn:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ============================================
+   CONFIRMATION PAGE
+   ============================================ */
+.confirm-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  width: 100%;
+  max-width: 560px;
+  padding: 3rem 2.5rem;
+  text-align: center;
+  animation: slideUp 0.45s ease both;
+}
+
+.confirm-icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(76,206,138,0.15);
+  border: 2px solid var(--color-success);
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--color-success);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.confirm-card h1 {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.confirm-subtitle {
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+}
+
+/* Review summary */
+.review-summary {
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  margin-bottom: 1.75rem;
+}
+
+.review-summary .summary-row {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.9rem;
+}
+
+.review-summary .summary-row:last-child {
+  border-bottom: none;
+}
+
+.summary-key {
+  color: var(--color-text-muted);
+  min-width: 120px;
+  font-weight: 500;
+}
+
+.summary-val {
+  color: var(--color-text);
+}
+
+/* Counter */
+.counter-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: var(--color-accent-dim);
+  border: 1.5px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.counter-label {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.counter-number {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+/* Back button */
+.back-btn {
+  display: inline-block;
+  background: transparent;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.7rem 1.5rem;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.back-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.site-footer {
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+}
+
+.footer-inner p {
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  line-height: 1.8;
+}
+
+/* ============================================
+   RESPONSIVE – MOBILE
+   ============================================ */
+@media (max-width: 600px) {
+  .form-card-header,
+  .review-form {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .form-card-header {
+    padding-top: 1.5rem;
+  }
+
+  .form-card-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .checkbox-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .star-rating label {
+    font-size: 1.9rem;
+  }
+
+  .confirm-card {
+    padding: 2rem 1.25rem;
+  }
+
+  .confirm-card h1 {
+    font-size: 1.8rem;
+  }
+
+  .summary-key {
+    min-width: 90px;
+  }
+
+  .counter-box {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
