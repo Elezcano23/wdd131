@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintenance Guide - MotoMatch Guide</title>
+    <meta name="description" content="Motorcycle maintenance guides: oil changes, chain care, brakes, filters, and more. Interactive checklist to help you stay on top of maintenance tasks.">
+    <meta name="author" content="Ezequiel Lezcano">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/maintenance.css">
+    <script src="scripts/nav.js" defer></script>
+    <script src="scripts/maintenance.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">
+                <img src="images/motomatch-logo.png" alt="MotoMatch Guide Logo" loading="lazy">
+                <span>MotoMatch Guide</span>
+            </a>
+            <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="maintenance.html" class="active">Maintenance</a></li>
+                    <li><a href="comparison.html">Comparison</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-hero">
+            <div class="page-hero-inner">
+                <h1>Maintenance Guide</h1>
+                <p>Everything you need to know to keep your motorcycle in excellent condition.</p>
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="section-inner">
+                <h2 class="section-title">Essential Maintenance Tasks</h2>
+                <div class="accent-line"></div>
+                <p class="section-subtitle">Click on each task to view detailed information.</p>
+                <div class="accordion" id="accordion"></div>
+            </div>
+        </section>
+
+        <section class="section checklist-section">
+            <div class="section-inner">
+                <div class="checklist-header">
+                    <div>
+                        <h2 class="section-title">Service Checklist</h2>
+                        <div class="accent-line"></div>
+                        <p class="section-subtitle">Your progress is saved automatically.</p>
+                    </div>
+                    <button class="btn btn-outline" id="reset-checklist">Reset</button>
+                </div>
+                <div class="checklist-progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <p class="progress-label" id="progress-label"></p>
+                <ul class="checklist" id="checklist"></ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <p>&copy; <span id="year"></span> MotoMatch Guide - Ezequiel Lezcano</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+            <p><a href="references.html">References</a></p>
+        </div>
+    </footer>
+</body>
+</html>

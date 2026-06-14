@@ -1,0 +1,31 @@
+main {
+    max-width: 800px;
+    margin: auto;
+    padding: 3rem 1.5rem;
+}
+
+h1 {
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    margin-top: 2rem;
+    font-size: 1.25rem;
+}
+
+.ref-list {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.ref-list li {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.ref-list a {
+    color: var(--secondary);
+    text-decoration: underline;
+}

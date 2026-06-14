@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorcycle Catalog - MotoMatch Guide</title>
+    <meta name="description" content="Explore the complete motorcycle catalog. Filter by category and find the perfect motorcycle for your needs.">
+    <meta name="author" content="Ezequiel Lezcano">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/catalog.css">
+    <script src="scripts/nav.js" defer></script>
+    <script src="scripts/catalog.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">
+                <img src="images/motomatch-logo.png" alt="MotoMatch Guide Logo" loading="lazy">
+                <span>MotoMatch Guide</span>
+            </a>
+            <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalog.html" class="active">Catalog</a></li>
+                    <li><a href="maintenance.html">Maintenance</a></li>
+                    <li><a href="comparison.html">Comparison</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="section-inner">
+                <h1 class="section-title">Motorcycle Catalog</h1>
+                <div class="accent-line"></div>
+                <p class="section-subtitle">Filter by category and find the motorcycle you're looking for.</p>
+                <div class="filter-bar" id="filter-bar"></div>
+                <p class="results-count" id="results-count"></p>
+                <div class="grid-3" id="catalog-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <p>&copy; <span id="year"></span> MotoMatch Guide - Ezequiel Lezcano</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+            <p><a href="references.html">References</a></p>
+        </div>
+    </footer>
+</body>
+</html>

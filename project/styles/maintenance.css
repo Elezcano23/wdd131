@@ -1,0 +1,198 @@
+/* ===== PAGE HERO ===== */
+.page-hero {
+    background: var(--primary);
+    color: var(--white);
+    padding: 3rem 1.5rem;
+}
+
+.page-hero-inner {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.page-hero h1 {
+    color: var(--white);
+    font-size: clamp(1.75rem, 4vw, 2.8rem);
+    margin-bottom: 0.5rem;
+}
+
+.page-hero p {
+    color: #ccc;
+    max-width: 500px;
+}
+
+/* ===== ACORDEÓN ===== */
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.accordion-item {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.accordion-trigger {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 1.1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    color: var(--primary);
+    text-align: left;
+    transition: background 0.2s;
+}
+
+.accordion-trigger:hover {
+    background: #f9f9f9;
+}
+
+.accordion-trigger.open {
+    border-bottom: 2px solid var(--secondary);
+}
+
+.accordion-icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+    flex-shrink: 0;
+}
+
+.accordion-trigger.open .accordion-icon {
+    transform: rotate(45deg);
+}
+
+.accordion-body {
+    display: none;
+    padding: 1.25rem 1.5rem;
+    color: #555;
+    line-height: 1.7;
+    border-top: 1px solid #eee;
+}
+
+.accordion-body.open {
+    display: block;
+}
+
+.accordion-body ul {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+.accordion-body ul li {
+    margin-bottom: 0.4rem;
+}
+
+.accordion-km {
+    display: inline-block;
+    font-size: 0.78rem;
+    background: var(--secondary);
+    color: var(--white);
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    margin-left: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    vertical-align: middle;
+}
+
+/* ===== CHECKLIST ===== */
+.checklist-section {
+    background: var(--white);
+}
+
+.checklist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.checklist-progress-bar {
+    background: #e5e5e5;
+    border-radius: 999px;
+    height: 8px;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--secondary);
+    border-radius: 999px;
+    transition: width 0.4s ease;
+    width: 0%;
+}
+
+.progress-label {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 1.5rem;
+}
+
+.checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.checklist-item {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    background: var(--background);
+    border-radius: var(--radius);
+    padding: 0.85rem 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    border: 2px solid transparent;
+}
+
+.checklist-item:hover {
+    background: #f0ede3;
+}
+
+.checklist-item.done {
+    border-color: var(--secondary);
+    background: #fffbf0;
+}
+
+.checklist-item.done .check-label {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.checklist-checkbox {
+    width: 22px;
+    height: 22px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 0.9rem;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.checklist-item.done .checklist-checkbox {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: white;
+}
+
+.check-label {
+    font-size: 0.95rem;
+    color: var(--text);
+    transition: color 0.2s;
+}

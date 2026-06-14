@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorcycle Comparison - MotoMatch Guide</title>
+    <meta name="description" content="Compare two motorcycles side by side: specifications, price, advantages, and disadvantages. Make the best buying decision.">
+    <meta name="author" content="Ezequiel Lezcano">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/comparison.css">
+    <script src="scripts/nav.js" defer></script>
+    <script src="scripts/comparison.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">
+                <img src="images/motomatch-logo.png" alt="MotoMatch Guide Logo" loading="lazy">
+                <span>MotoMatch Guide</span>
+            </a>
+            <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="maintenance.html">Maintenance</a></li>
+                    <li><a href="comparison.html" class="active">Comparison</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-hero">
+            <div class="page-hero-inner">
+                <h1>Motorcycle Comparison</h1>
+                <p>Select two motorcycles and compare them side by side.</p>
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="section-inner">
+                <form id="comparison-form">
+                    <div class="selectors">
+                        <div class="selector-group">
+                            <label class="selector-label" for="select-a">Motorcycle A</label>
+                            <select id="select-a" class="moto-select" required>
+                                <option value="">Select a motorcycle</option>
+                            </select>
+                        </div>
+
+                        <div class="vs-badge">VS</div>
+
+                        <div class="selector-group">
+                            <label class="selector-label" for="select-b">Motorcycle B</label>
+                            <select id="select-b" class="moto-select" required>
+                                <option value="">Select a motorcycle</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="comparison-action">
+                        <button class="btn btn-primary" id="compare-btn" type="submit">Compare</button>
+                    </div>
+                </form>
+
+                <div id="comparison-result" class="comparison-result" hidden></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <p>&copy; <span id="year"></span> MotoMatch Guide - Ezequiel Lezcano</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+            <p><a href="references.html">References</a></p>
+        </div>
+    </footer>
+</body>
+</html>

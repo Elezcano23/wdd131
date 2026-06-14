@@ -1,0 +1,88 @@
+/* ===== FILTER BAR ===== */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.filter-btn {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    padding: 0.4rem 1.1rem;
+    border-radius: 999px;
+    border: 2px solid var(--secondary);
+    background: transparent;
+    color: var(--secondary);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--secondary);
+    color: var(--white);
+}
+
+.results-count {
+    font-size: 0.875rem;
+    color: #888;
+    margin-bottom: 1.5rem;
+}
+
+/* ===== CATALOG CARD extra ===== */
+.card-specs {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+}
+
+.spec {
+    font-size: 0.78rem;
+    color: #777;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.spec strong {
+    color: var(--primary);
+}
+
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #888;
+}
+
+.no-results p {
+    margin-bottom: 1rem;
+}
+
+/* ===== COMPARE BUTTON ===== */
+.btn-compare {
+    background: var(--primary);
+    color: var(--white);
+    font-size: 0.85rem;
+    padding: 0.45rem 1rem;
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.05em;
+    transition: background 0.2s;
+    display: inline-block;
+}
+
+.btn-compare:hover {
+    background: #333;
+}
+
+.card-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
